@@ -33,7 +33,7 @@ function showPopup() {
   popupText.textContent = "Waiting to get the surprise...";
 
   setTimeout(() => {
-    popupText.textContent = "I love ammu 32 ⚙️🦤 Insta = pattunithu@2002";
+    popupText.textContent = "I love ammu 32 🤎⚙️ Insta = pattunithu@2002";
   }, 3000);
 }
 
