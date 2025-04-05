@@ -1,0 +1,130 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: linear-gradient(to bottom right, #ffd6d6, #ffe5ec);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  min-height: 100vh;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 3em;
+  color: #d6336c;
+  animation: popIn 1s ease-out;
+}
+
+.melting-text {
+  font-size: 1.8em;
+  color: #ff5e7e;
+  margin-top: 10px;
+  animation: melt 2s infinite alternate ease-in-out;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes melt {
+  0%   { transform: translateY(0); text-shadow: 0 2px 5px #fff; }
+  100% { transform: translateY(5px); text-shadow: 0 5px 15px #ff6b6b; }
+}
+
+.photo-container {
+  margin-top: 30px;
+  width: 320px;
+  height: 320px;
+  border: 10px solid white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: white;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.photo-container:hover {
+  transform: scale(1.02);
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.message {
+  margin-top: 30px;
+  font-size: 1.2em;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 30px;
+  padding: 14px 28px;
+  font-size: 1em;
+  background-color: #d6336c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transform: scale(0.8);
+  opacity: 0;
+  animation: popupIn 1s ease forwards;
+}
+
+.popup-box h2 {
+  color: #ff5e7e;
+  margin-bottom: 15px;
+}
+
+.popup-box p {
+  font-size: 1.3em;
+  min-height: 50px;
+}
+
+@keyframes popupIn {
+  0% { opacity: 0; transform: scale(0.8) rotate(-5deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+audio { display: none; }

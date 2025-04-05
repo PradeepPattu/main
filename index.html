@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday My Love</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Happy Birthday My Love</h1>
+    <div class="melting-text" id="meltingWords"></div>
+  </div>
+
+  <div class="photo-container" onclick="changePhoto()">
+    <img id="mainPhoto" src="first.jpg" alt="Love Photo">
+  </div>
+
+  <div class="message">
+    On this special day, I just want to say...<br>
+    You're the sunshine in my cloudy days, the beat in my heart, and the love of my life.<br>
+    Let every moment of today be filled with smiles, joy, and magic. I love you!
+  </div>
+
+  <button onclick="showPopup()">Click for Surprise</button>
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <h2>Surprise Message</h2>
+      <p id="popupText">Waiting to get the surprise...</p>
+      <button onclick="hidePopup()">Close</button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="FAV.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
